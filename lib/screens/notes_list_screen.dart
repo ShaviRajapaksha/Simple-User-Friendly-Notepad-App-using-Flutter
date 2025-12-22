@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:notepad/db/note_database.dart';
+import 'package:notepad/screens/notes_editor_screen.dart';
+import 'package:notepad/screens/notes_view_screen.dart';
+import '../db/note_database.dart';
 import '../models/note.dart';
 
-class NoteListScreen extends StatefulWidget {
-  const NoteListScreen({super.key});
+
+class NotesListScreen extends StatefulWidget {
+  const NotesListScreen({super.key});
 
   @override
-  State<NoteListScreen> createState() => _NoteListScreenState();
+  State<NotesListScreen> createState() => _NotesListScreenState();
 }
 
-class _NoteListScreenState extends State<NoteListScreen> {
+class _NotesListScreenState extends State<NotesListScreen> {
   List<Note> notes = [];
 
   @override
@@ -26,19 +29,19 @@ class _NoteListScreenState extends State<NoteListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Notes')),
+      appBar: AppBar(title: const Text('My Notes')),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await Navigator.push(
             context,
-            MaterialPageRoute(builder: (_) => const NoteListScreen()),
+            MaterialPageRoute(builder: (_) => const NoteEditorScreen()),
           );
           loadNotes();
         },
         child: const Icon(Icons.add),
       ),
       body: notes.isEmpty
-          ? const Center(child: Text("No notes yet"))
+          ? const Center(child: Text('No notes yet'))
           : ListView.builder(
               itemCount: notes.length,
               itemBuilder: (context, index) {
@@ -53,7 +56,9 @@ class _NoteListScreenState extends State<NoteListScreen> {
                   onTap: () async {
                     await Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (_) => const NoteListScreen()),
+                      MaterialPageRoute(
+                        builder: (_) => NoteViewScreen(note: note),
+                      ),
                     );
                     loadNotes();
                   },
