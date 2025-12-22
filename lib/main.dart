@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notepad/screens/notes_list_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,12 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: Text(
-        'Hi, Flutter!',
-        style: TextStyle(fontSize: 24, color: Colors.blue),
+      title: 'Notepad',
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
       ),
+      home: const NoteListScreen(),
     );
   }
 }
+
+
