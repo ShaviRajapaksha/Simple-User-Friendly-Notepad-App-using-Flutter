@@ -26,10 +26,28 @@ Notes List Screen
 Note View Screen  
 Note Editor Screen
 
+<table>
+ <tr>
+ <td>
 <img width="431" height="790" alt="Screenshot 2025-12-23 at 20 39 07" src="https://github.com/user-attachments/assets/3c1418ae-8e9a-491e-a8a9-683a3db624ba" />
+ </td>
+  <td>
 <img width="429" height="785" alt="Screenshot 2025-12-23 at 20 39 24" src="https://github.com/user-attachments/assets/ca595619-a6fb-498f-a8fa-b92870d60c27" />
+ </td>
+ </tr>
+  <tr>
+ <td>
 <img width="433" height="783" alt="Screenshot 2025-12-23 at 20 39 35" src="https://github.com/user-attachments/assets/296ca573-db1b-4c1d-8911-6cb034e247e3" />
+ </td>
+  <td>
 <img width="441" height="786" alt="Screenshot 2025-12-23 at 20 39 47" src="https://github.com/user-attachments/assets/93ee0e81-d8f0-4878-b9b1-723e0a3f2346" />
+ </td>
+ </tr>
+</table>
+
+
+
+
 ---
 
 ## 🧱 Project Structure
